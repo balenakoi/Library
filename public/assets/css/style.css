@@ -322,7 +322,35 @@ textarea {
     }
 
     .button {
-        padding: 10px 10px 10px 10px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .custom-dropdown {
+
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px;
+
+    }
+
+    .custom-dropdown select {
+
+        background-color: #4999e6;
+        color: #fff;
+        font-size: inherit;
+        padding: .5em;
+        padding-right: 0.5em;
+        padding-right: 2.5em;
+        border: 0;
+        margin: 0;
+        border-radius: 3px;
+        text-indent: 0.01px;
+        text-overflow: '';
+
     }
 
     table {
@@ -344,14 +372,25 @@ textarea {
 /* ############################   TABLETS   ############################ */
 /* ##################################################################### */
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .button {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+}
 
 /* ##################################################################### */
 /* ############################   DESKTOPS   ########################### */
 /* ##################################################################### */
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: 992px) {}
 
+/* ##################################################################### */
+/* ########################   LARGE DESKTOPS   ######################### */
+/* ##################################################################### */
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
     body {
         font-family: "Lato", sans-serif;
         transition: background-color .5s;
@@ -554,6 +593,7 @@ textarea {
     div.button a.Cbtn-primary {
         background-color: #5AADF2;
         color: #FFF;
+        padding: 10px 10px 10px 10px;
     }
 
     div.button a.Cbtn-primary:hover {
@@ -569,6 +609,37 @@ textarea {
         background-color: #fd7676;
     }
 
+    .button {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .custom-dropdown {
+
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px;
+
+    }
+
+    .custom-dropdown select {
+
+        background-color: #4999e6;
+        color: #fff;
+        font-size: inherit;
+        padding: .5em;
+        padding-right: 0.5em;
+        padding-right: 2.5em;
+        border: 0;
+        margin: 0;
+        border-radius: 3px;
+        text-indent: 0.01px;
+        text-overflow: '';
+
+    }
+
     table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
@@ -582,100 +653,7 @@ textarea {
         padding: 8px;
     }
 
-
-
-
-    .big {
-        font-size: 1.2em;
-    }
-
-    .small {
-        font-size: .7em;
-    }
-
-    .square {
-        width: .7em;
-        height: .7em;
-        margin: .5em;
-        display: inline-block;
-    }
-
-    /* Custom dropdown */
-    .custom-dropdown {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 10px;
-        /* demo only */
-    }
-
-    .custom-dropdown select {
-        background-color: #4999e6;
-        ;
-        color: #fff;
-        font-size: inherit;
-        padding: .5em;
-        padding-right: 2.5em;
-        border: 0;
-        margin: 0;
-        border-radius: 3px;
-        text-indent: 0.01px;
-        text-overflow: '';
-        -webkit-appearance: button;
-        /* hide default arrow in chrome OSX */
-    }
-
-    .custom-dropdown::before,
-    .custom-dropdown::after {
-        content: "";
-        position: absolute;
-        pointer-events: none;
-    }
-
-    .custom-dropdown::after {
-        /*  Custom dropdown arrow */
-        content: "\25BC";
-        height: 1em;
-        font-size: .625em;
-        line-height: 1;
-        right: 1.2em;
-        top: 50%;
-        margin-top: -.5em;
-    }
-
-    .custom-dropdown::before {
-        /*  Custom dropdown arrow cover */
-        width: 2em;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        border-radius: 0 3px 3px 0;
-    }
-
-    .custom-dropdown select[disabled] {
-        color: rgba(0, 0, 0, .3);
-    }
-
-    .custom-dropdown select[disabled]::after {
-        color: rgba(0, 0, 0, .1);
-    }
-
-    .custom-dropdown::before {
-        background-color: rgba(0, 0, 0, .15);
-    }
-
-    .custom-dropdown::after {
-        color: rgba(0, 0, 0, .4);
-    }
-
-
 }
-
-/* ##################################################################### */
-/* ########################   LARGE DESKTOPS   ######################### */
-/* ##################################################################### */
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
 
 
 

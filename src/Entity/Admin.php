@@ -7,11 +7,11 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Table(name="user")
+ * @ORM\Table(name="admin")
  * @UniqueEntity(fields="email")
  * @ORM\Entity()
  */
-class User implements UserInterface, \Serializable
+class Admin implements UserInterface, \Serializable
 {
 
     /**
@@ -89,7 +89,7 @@ class User implements UserInterface, \Serializable
     public function getRoles()
     {
         if (empty($this->roles)) {
-            return ['ROLE_USER'];
+            return ['ROLE_ADMIN'];
         }
         return $this->roles;
     }
@@ -170,12 +170,12 @@ class User implements UserInterface, \Serializable
         $this->isActive = $isActive;
     }
 
-    public function getName(): ?string
+    public function getName() : ? string
     {
         return $this->name;
     }
 
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
 

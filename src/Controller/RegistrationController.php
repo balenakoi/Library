@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller;
 
-use App\Form\UserType;
-use App\Entity\User;
+use App\Form\AdminType;
+use App\Entity\Admin;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,8 +17,8 @@ class RegistrationController extends Controller
     public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         //  build the form
-        $user = new User();
-        $form = $this->createForm(UserType::class, $user);
+        $user = new Admin();
+        $form = $this->createForm(AdminType::class, $user);
         //  handle the submit (will only happen on POST)
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {

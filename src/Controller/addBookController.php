@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller;
 
-use App\Form\AddType;
-use App\Entity\Add;
+use App\Form\AddBookType;
+use App\Entity\Books;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,8 +17,8 @@ class addBookController extends Controller
     public function add(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         //  build the form
-        $user = new Add();
-        $form = $this->createForm(AddType::class, $user);
+        $user = new Books();
+        $form = $this->createForm(AddBookType::class, $user);
         //  handle the submit
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {

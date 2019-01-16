@@ -1,14 +1,12 @@
 security:
-   # encoder
     encoders:
-        App\Entity\User:
-            algorithm: bcrypt
-   
+        App\Entity\Admin:
+            algorithm: bcrypt   
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         our_db_provider:
             entity:
-                class: App\Entity\User
+                class: App\Entity\Admin
                 property: email
        
     firewalls:
@@ -39,6 +37,7 @@ security:
         - { path: ^/edit, roles: ROLE_ADMIN }
         - { path: ^/userEdit, roles: ROLE_ADMIN }
         - { path: ^/details, roles: ROLE_ADMIN }
+        - { path: ^/$, roles: IS_AUTHENTICATED_REMEMBERED }
 
 
 #security:

@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\AddRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\BooksRepository")
  */
-class Add
+class Books
 {
     /**
      * @ORM\Id()
@@ -130,12 +130,12 @@ class Add
         return $this;
     }
 
-    public function getResume(): ?string
+    public function getResume() : ? string
     {
         return $this->resume;
     }
 
-    public function setResume(string $resume): self
+    public function setResume(string $resume) : self
     {
         $this->resume = $resume;
 

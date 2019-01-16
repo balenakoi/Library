@@ -8,7 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class UserType extends AbstractType
+class AdminType extends AbstractType
 {
 
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -21,6 +21,6 @@ class UserType extends AbstractType
                 'first_options' => array('label' => 'Mot de passe'),
                 'second_options' => array('label' => 'Confirmation du mot de passe'),
             ))
-            ->add('submit', SubmitType::class, ['label' => 'Envoyer', 'attr' => ['class' => 'btn-primary btn-block']]);
+            ->add('submit', SubmitType::class, ['label' => 'Registrer', 'attr' => ['class' => 'btn-primary btn-block']]);
     }
 }

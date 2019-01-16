@@ -9,7 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
-class AddType extends AbstractType
+class AddBookType extends AbstractType
 {
 
     public function buildForm(FormBuilderInterface $builder, array $options)

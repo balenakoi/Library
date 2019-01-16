@@ -8,7 +8,7 @@ class HomepageController extends Controller
 {
 
     /**
-     * @Route("/Accuile")
+     * @Route("/")
      */
     public function index()
     {
