@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Utilisateur'  %}
+
+{% block body %}
+    
+  <div class="button add">
+     <a href="{{path('app_addUser_index')}}" class="Cbtn Cbtn-primary">Ajouter un utilisateur</a>
+  </div>
+  <div style="overflow-x:auto;" class="mt-2">
+      <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Identifiant</th>
+            <th>Nombre de livres empruntés </th>
+            <th>Deatils</th>
+        </tr>
+        <tr>
+            <td>Akoi </td>
+            <td>Balen</td>
+            <td>12345l7</td>
+            <td>3</td>
+            <td> 
+             <div class="button">
+               <a href="{{path('app_user_detail')}}" class="Cbtn Cbtn-primary">Voir</a>
+               </div>
+               <div class="button">
+               <a href="{{path('app_editUser_editUser')}}" class="Cbtn Cbtn-primary">Modifier</a>
+             </div>
+            </td>
+            
+        </tr>
+            <tr>
+            <td>Akoi </td>
+            <td>Balen</td>
+            <td>12345l7</td>
+            <td>3</td>
+            <td>
+             <div class="button">
+               <a href="{{path('app_details_show')}}" class="Cbtn Cbtn-primary">Voir</a>
+             </div>
+             <div class="button">
+               <a href="{{path('app_editUser_editUser')}}" class="Cbtn Cbtn-primary">Modifier</a>
+             </div>
+            </td>
+            
+        </tr>
+      </table>
+    </div>
+
+
+
+{% endblock %}

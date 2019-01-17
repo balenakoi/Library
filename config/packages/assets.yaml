@@ -1,0 +1,12 @@
+framework:
+    assets:
+        packages:
+            apps:
+                json_manifest_path: '%kernel.project_dir%/var/assets/apps-manifest.json'
+            backend:
+                json_manifest_path: '%kernel.project_dir%/var/assets/backend-manifest.json'
+            frontend:
+                json_manifest_path: '%kernel.project_dir%/var/assets/frontend-manifest.json'
+# framework:
+#     assets:
+#         json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
